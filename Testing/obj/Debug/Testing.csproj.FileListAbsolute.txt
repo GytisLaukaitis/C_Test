@@ -1,0 +1,6 @@
+C:\Users\gytis\RiderProjects\Solution1\Testing\bin\Debug\Testing.exe
+C:\Users\gytis\RiderProjects\Solution1\Testing\bin\Debug\Testing.pdb
+C:\Users\gytis\RiderProjects\Solution1\Testing\obj\Debug\Testing.csprojAssemblyReference.cache
+C:\Users\gytis\RiderProjects\Solution1\Testing\obj\Debug\Testing.csproj.CoreCompileInputs.cache
+C:\Users\gytis\RiderProjects\Solution1\Testing\obj\Debug\Testing.exe
+C:\Users\gytis\RiderProjects\Solution1\Testing\obj\Debug\Testing.pdb
