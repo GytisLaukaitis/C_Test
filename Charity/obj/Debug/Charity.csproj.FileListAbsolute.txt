@@ -1,0 +1,6 @@
+C:\Users\gytis\RiderProjects\Solution1\Charity\bin\Debug\Charity.exe
+C:\Users\gytis\RiderProjects\Solution1\Charity\bin\Debug\Charity.pdb
+C:\Users\gytis\RiderProjects\Solution1\Charity\obj\Debug\Charity.csprojAssemblyReference.cache
+C:\Users\gytis\RiderProjects\Solution1\Charity\obj\Debug\Charity.csproj.CoreCompileInputs.cache
+C:\Users\gytis\RiderProjects\Solution1\Charity\obj\Debug\Charity.exe
+C:\Users\gytis\RiderProjects\Solution1\Charity\obj\Debug\Charity.pdb
