@@ -2,11 +2,11 @@
 {
     public class Shoe
     {
-        public string type;
-        public string season;
-        public int size;
-        public string color;
-        public string condition;
+        private string type;
+        private string season;
+        private int size;
+        private string color;
+        private string condition;
 
         public string Type
         {
