@@ -1,25 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Linq;
+using System.Text;
 
 namespace Charity
 {
-    internal class Program
+    internal static class Program
     {
-        private static List<Shoe> _shoes = new List<Shoe>();
+        private static readonly List<Shoe> Shoes = new List<Shoe>();
 
-        private static List<Shoe> _shoes2 = new List<Shoe>();
+        private static readonly List<Shoe> Shoes2 = new List<Shoe>();
 
 
-        public static void Main(string[] args)
+        public static void Main()
         {
-            ReadShoesFromFile1();
-            ReadShoesFromFile2();
+            ReadShoesFromFiles();
+            ReadShoesFromFiles2();
 
-            const bool exit = false;
-            
             Console.WriteLine("Welcome to our charity. Choose from your options below:");
             Menu();
             while (true)
@@ -29,57 +27,52 @@ namespace Charity
                 switch (option)
                 {
                     case "1":
-                        ShowShoes();
+                        ShowShoesInCharities();
                         Console.WriteLine("------------------------------------------------");
                         Menu();
                         break;
                     case "2":
-                        ShowShoes2();
-                        Console.WriteLine("------------------------------------------------");
-                        Menu();
-                        break;
-                    case "3":
                         KidsShoes();
                         Console.WriteLine("------------------------------------------------");
                         Menu();
                         break;
-                    case "4":
+                    case "3":
                         AddShoesToCharity();
                         Console.WriteLine("------------------------------------------------");
                         Menu();
                         break;
-                    case "5":
+                    case "4":
                         AddShoesToCharity2();
                         Console.WriteLine("------------------------------------------------");
                         Menu();
                         break;
-                    case "6":
+                    case "5":
                         MoreShoesForAdults();
                         Console.WriteLine("------------------------------------------------");
                         Menu();
                         break;
-                    case "7":
+                    case "6":
                         RemoveSatisfyableShoes();
                         Console.WriteLine("------------------------------------------------");
                         Menu();
                         break;
-                    case "8":
+                    case "7":
                         SortingShoes();
                         Console.WriteLine("------------------------------------------------");
                         Menu();
                         break;
-                    case "9":
+                    case "8":
                         Exit();
                         break;
                 }
             }
 
-
-            SortingShoes();
+            // ReSharper disable once FunctionNeverReturns
         }
 
+
         // Reading all shoes from a file 1
-        private static void ReadShoesFromFile1()
+        private static void ReadShoesFromFiles()
         {
             const int bufferSize = 128;
             using (var fileStream = File.OpenRead("C:/Users/gytis/RiderProjects/Solution1/Charity/Charity.csv"))
@@ -91,23 +84,21 @@ namespace Charity
                 {
                     var chunks = line.Split(csvSplitBy);
 
-                    if (chunks.Length < 4)
-                    {
-                        var title = line;
-                        Console.WriteLine(title);
-                    }
-                    else
-                    {
-                        _shoes.Add(new Shoe(chunks[0].Trim(), chunks[1].Trim(), int.Parse(chunks[2].Trim()),
-                            chunks[3].Trim(),
-                            chunks[4].Trim()));
-                    }
+                    if (chunks.Length != 5) continue;
+
+                    var type = chunks[0].Trim();
+                    var season = chunks[1].Trim();
+                    var size = int.Parse(chunks[2].Trim());
+                    var color = chunks[3].Trim();
+                    var condition = chunks[4].Trim();
+
+                    Shoes.Add(new Shoe(type, season, size, color, condition));
                 }
             }
         }
 
         // Reading all shoes from a file 2
-        private static void ReadShoesFromFile2()
+        private static void ReadShoesFromFiles2()
         {
             const int bufferSize = 128;
             using (var fileStream = File.OpenRead("C:/Users/gytis/RiderProjects/Solution1/Charity/Charity2.csv"))
@@ -119,35 +110,32 @@ namespace Charity
                 {
                     var chunks = line.Split(csvSplitBy);
 
-                    if (chunks.Length < 4)
-                    {
-                        var title = line;
-                        Console.WriteLine(title);
-                    }
-                    else
-                    {
-                        _shoes2.Add(new Shoe(chunks[0].Trim(), chunks[1].Trim(), int.Parse(chunks[2].Trim()),
-                            chunks[3].Trim(),
-                            chunks[4].Trim()));
-                    }
+                    if (chunks.Length != 5) continue;
+
+                    var type = chunks[0].Trim();
+                    var season = chunks[1].Trim();
+                    var size = int.Parse(chunks[2].Trim());
+                    var color = chunks[3].Trim();
+                    var condition = chunks[4].Trim();
+
+                    Shoes2.Add(new Shoe(type, season, size, color, condition));
                 }
             }
         }
 
-        // Display all shoes in charity 1
-        private static void ShowShoes()
+        // Display all shoes in both Charities
+        private static void ShowShoesInCharities()
         {
-            foreach (var shoe in _shoes)
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Charity 1");
+            foreach (var shoe in Shoes)
             {
                 Console.WriteLine(shoe.ToString());
             }
-        }
 
-
-        // Display all shoes in charity 2
-        private static void ShowShoes2()
-        {
-            foreach (var shoe in _shoes2)
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Charity 2");
+            foreach (var shoe in Shoes2)
             {
                 Console.WriteLine(shoe.ToString());
             }
@@ -156,15 +144,13 @@ namespace Charity
         // Checking which charity has more shoes for adults
         private static void MoreShoesForAdults()
         {
-            var shoes = from shoe in _shoes
+            var shoes = from shoe in Shoes
                 where shoe.Type.ToLower().Contains("woman") || shoe.Type.ToLower().Contains("man")
                 select shoe;
 
-
-            var shoes2 = from shoe2 in _shoes2
+            var shoes2 = from shoe2 in Shoes2
                 where shoe2.Type.ToLower().Contains("woman") || shoe2.Type.ToLower().Contains("man")
                 select shoe2;
-
 
             Console.WriteLine(shoes.Count() > shoes2.Count()
                 ? "Charity 1 has more shoes for adults"
@@ -175,7 +161,7 @@ namespace Charity
 
         private static void KidsShoes()
         {
-            var kidsShoes = _shoes.Union(_shoes2)
+            var kidsShoes = Shoes.Union(Shoes2)
                 .Where(shoe => shoe.Type.ToLower().Contains("kids") && shoe.Season.ToLower().Contains("winter"))
                 .OrderBy(shoe => shoe.Size)
                 .ToList();
@@ -191,9 +177,8 @@ namespace Charity
 
         private static void SortingShoes()
         {
-            var sortedBy = _shoes.OrderBy(shoe => shoe.Size).ToList();
-            var sortedBy2 = _shoes2.OrderBy(shoe2 => shoe2.Size).ToList();
-
+            var sortedBy = Shoes.OrderBy(shoe => shoe.Size).ToList();
+            var sortedBy2 = Shoes2.OrderBy(shoe2 => shoe2.Size).ToList();
             Console.WriteLine("Sorted by shoe size Charity 1 list");
             foreach (var shoe in sortedBy)
             {
@@ -211,8 +196,8 @@ namespace Charity
         // Removes all shoes with satisfyable condition
         private static void RemoveSatisfyableShoes()
         {
-            _shoes.RemoveAll(shoe => shoe.Condition.ToLower().Contains("satisfyable"));
-            _shoes2.RemoveAll(shoe2 => shoe2.Condition.ToLower().Contains("satisfyable"));
+            Shoes.RemoveAll(shoe => shoe.Condition.ToLower().Contains("satisfiable"));
+            Shoes2.RemoveAll(shoe2 => shoe2.Condition.ToLower().Contains("satisfiable"));
         }
 
         // Lets donate some more shoes to Charity 1
@@ -220,17 +205,18 @@ namespace Charity
         {
             Console.WriteLine(
                 "So nice of you, what type of shoes you would like to donate? Choose from man,woman,kids");
-            string type = Console.ReadLine();
+
+            var type = Console.ReadLine();
             Console.WriteLine("Which season it fits the most? Choose from spring,summer,autumn,winter");
-            string season = Console.ReadLine();
+            var season = Console.ReadLine();
             Console.WriteLine("What size is it?");
-            int size = int.Parse(Console.ReadLine());
+            var size = int.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
             Console.WriteLine("What color is it?");
-            string color = Console.ReadLine();
+            var color = Console.ReadLine();
             Console.WriteLine("Choose condition from: very good,good,satisfyable");
-            string condition = Console.ReadLine();
-            Shoe batai = new Shoe(type, season, size, color, condition);
-            _shoes.Add(batai);
+            var condition = Console.ReadLine();
+            var batai = new Shoe(type, season, size, color, condition);
+            Shoes.Add(batai);
         }
 
         // Lets donate some more shoes to Charity 2
@@ -238,31 +224,31 @@ namespace Charity
         {
             Console.WriteLine(
                 "So nice of you, what type of shoes you would like to donate? Choose from man,woman,kids");
-            string type = Console.ReadLine();
+
+            var type = Console.ReadLine();
             Console.WriteLine("Which season it fits the most? Choose from spring,summer,autumn,winter");
-            string season = Console.ReadLine();
+            var season = Console.ReadLine();
             Console.WriteLine("What size is it?");
-            int size = int.Parse(Console.ReadLine());
+            var size = int.Parse(Console.ReadLine() ?? throw new InvalidOperationException());
             Console.WriteLine("What color is it?");
-            string color = Console.ReadLine();
+            var color = Console.ReadLine();
             Console.WriteLine("Choose condition from: very good,good,satisfyable");
-            string condition = Console.ReadLine();
+            var condition = Console.ReadLine();
             Shoe batai = new Shoe(type, season, size, color, condition);
-            _shoes2.Add(batai);
+            Shoes2.Add(batai);
         }
 
         // Show menu
         private static void Menu()
         {
-            Console.WriteLine("1:Show all shoes in Charity 1");
-            Console.WriteLine("2:Show all shoes in Charity 2");
-            Console.WriteLine("3:Show all Winter shoes for Kids");
-            Console.WriteLine("4:Donate shoes to Charity 1");
-            Console.WriteLine("5:Donate shoes to Charity 2");
-            Console.WriteLine("6:Show which charity has more shoes for Adults");
-            Console.WriteLine("7:Remove shoes with 'Satisfyable' quality ");
-            Console.WriteLine("8:Sort shoes by their size");
-            Console.WriteLine("9:Exit program");
+            Console.WriteLine("1:Show all shoes of both charities");
+            Console.WriteLine("2:Show all Winter shoes for Kids");
+            Console.WriteLine("3:Donate shoes to Charity 1");
+            Console.WriteLine("4:Donate shoes to Charity 2");
+            Console.WriteLine("5:Show which charity has more shoes for Adults");
+            Console.WriteLine("6:Remove shoes with 'Satisfyable' quality ");
+            Console.WriteLine("7:Sort shoes by their size");
+            Console.WriteLine("8:Exit program");
         }
 
         // Exit program

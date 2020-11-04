@@ -2,41 +2,15 @@
 {
     public class Shoe
     {
-        private string type;
-        private string season;
-        private int size;
-        private string color;
-        private string condition;
+        public string Type { get; private set; }
 
-        public string Type
-        {
-            get => type;
-            set => type = value;
-        }
+        public string Season { get; private set; }
 
-        public string Season
-        {
-            get => season;
-            set => season = value;
-        }
+        public int Size { get; private set; }
 
-        public int Size
-        {
-            get => size;
-            set => size = value;
-        }
+        private string Color { get; set; }
 
-        public string Color
-        {
-            get => color;
-            set => color = value;
-        }
-
-        public string Condition
-        {
-            get => condition;
-            set => condition = value;
-        }
+        public string Condition { get; private set; }
 
         public Shoe(string type, string season, int size, string color, string condition)
         {
@@ -50,8 +24,8 @@
 
         public override string ToString()
         {
-            return "Shoe type: " + type + "\n" + "Season type: " + season + "\n"
-                   + "Size: " + size + "\n" + "Color: " + color + "\n" + "Condition: " + condition +"\n";
+            return "Shoe type: " + Type + "\n" + "Season type: " + Season + "\n"
+                   + "Size: " + Size + "\n" + "Color: " + Color + "\n" + "Condition: " + Condition +"\n";
         }
     }
 }
