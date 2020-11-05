@@ -8,6 +8,7 @@ namespace Charity
 {
     internal static class Program
     {
+        // Paths to all charities
         private const string FirstFilePath = @"C:\Users\gytis\RiderProjects\Solution1\Charity\Charity.csv";
         private const string SecondFilePath = @"C:\Users\gytis\RiderProjects\Solution1\Charity\Charity2.csv";
         private const string ThirdFilePath = @"C:\Users\gytis\RiderProjects\Solution1\Charity\Charity3.csv";
@@ -19,14 +20,17 @@ namespace Charity
             var secondCharity = new Organization();
 
 
+            // Displaying all shoes in both charities
+            
             firstCharity.ParseFile(FirstFilePath);
             secondCharity.ParseFile(SecondFilePath);
 
 
+            // Initialize list for kids winter shoes
             var winterShoes = new List<Shoe>();
 
 
-            Console.WriteLine("Choose from your options below:");
+            Console.WriteLine("Choose from the options below:");
             Menu();
             while (true)
             {
@@ -34,9 +38,10 @@ namespace Charity
                 var option = Console.ReadLine();
                 switch (option)
                 {
+                    // Option 1
                     case "1":
                         var adultShoeCountInFirst =
-                            firstCharity.GetAdultShoes().Count; //su antra tapati ir poto palyginsi kuris didesnis
+                            firstCharity.GetAdultShoes().Count;
                         var adultShoeCountInSecond = secondCharity.GetAdultShoes().Count();
 
                         if (adultShoeCountInFirst > adultShoeCountInSecond)
@@ -60,6 +65,7 @@ namespace Charity
                         Menu();
                         break;
 
+                    // Option 2
                     case "2":
 
                         winterShoes.AddRange(firstCharity.Shoes.Where(x =>
@@ -73,6 +79,7 @@ namespace Charity
                         Menu();
                         break;
 
+                    // Option 3
                     case "3":
                         Console.WriteLine("Done! Here's a new sorted list");
                         Console.WriteLine();
@@ -86,6 +93,7 @@ namespace Charity
                         Menu();
                         break;
 
+                    // Option 4
                     case "4":
                         firstCharity.ClearShoes(Condition.Decent);
                         secondCharity.ClearShoes(Condition.Decent);
@@ -99,6 +107,7 @@ namespace Charity
                         Menu();
                         break;
 
+                    // Option 5
                     case "5":
 
                         firstCharity.ParseFile(ThirdFilePath);
@@ -107,6 +116,7 @@ namespace Charity
                         Menu();
                         break;
 
+                    // Option 6
                     case "6":
                         foreach (var shoe in winterShoes)
                         {
@@ -115,6 +125,8 @@ namespace Charity
 
                         Menu();
                         break;
+                    
+                    // Any other option evalutes to exit
                     default:
                         Exit();
                         break;
@@ -127,13 +139,12 @@ namespace Charity
         // Show menu
         private static void Menu()
         {
-            Console.WriteLine("1:Raskite kurioje labdaros organizacijoje yra daugiau batu skirtu suaugusiems");
-            Console.WriteLine(
-                "2:Surasykite i atskira rinkini vaikams ziemai skirtus batus is abieju labdaros organizaciju");
-            Console.WriteLine("3:Surikiuokite suformuotus sarasus pagal batu dydi");
-            Console.WriteLine("4:Pasalinkite is rezultatu batus, kuriu bukle yra patenkinama");
-            Console.WriteLine("5:Papildytio viena is rezultatu sarasu nauja labdara is failo");
-            Console.WriteLine("6:Parodyti vaiku zieminiu batu sarasa");
+            Console.WriteLine("1:Find out which charity has more shoes for adults");
+            Console.WriteLine("2:Find a separate set of children's winter shoes from both charities");
+            Console.WriteLine("3:Arrange the formed lists according to the size of the shoe");
+            Console.WriteLine("4:Remove from the result shoes that are in satisfactory condition");
+            Console.WriteLine("5:Add a new charity from the file to the list of results");
+            Console.WriteLine("6:Show a list of children's winter boots");
             Console.WriteLine("Anything else:Exit");
         }
 

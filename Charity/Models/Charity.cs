@@ -28,6 +28,8 @@ namespace Charity.Models
             set => _title = value;
         }
 
+        
+        // Getting all shoes for adults method
         public List<Shoe> GetAdultShoes()
         {
             var result = Shoes.Where(x => x.Type == ShoeType.Men).ToList();
@@ -36,6 +38,8 @@ namespace Charity.Models
             return result;
         }
 
+        
+        // Ordering all shoes by their size
         public void OrderShoesBySize()
         {
             var orderedEnumerable = Shoes.OrderBy(x => x.Size).ToList();
@@ -48,11 +52,13 @@ namespace Charity.Models
             }
         }
 
+        // Removing all "Decent" quality shoes
         public void ClearShoes(Condition condition)
         {
             Shoes.RemoveAll(x => x.Condition == condition);
         }
 
+        // Displaying all shoes
         public void ShowShoes()
         {
             Console.WriteLine("-------------------------");
@@ -63,6 +69,7 @@ namespace Charity.Models
             }
         }
 
+        // Parsing file into chunks and assembling them to objects
         public void ParseFile(string pathToFile)
         {
             const char csvSplitBy = ',';
@@ -100,6 +107,7 @@ namespace Charity.Models
             }
         }
 
+        // Parsing shoes condition
         private static Condition? ParseCondition(string condition)
         {
             switch (condition.ToLower())
@@ -118,6 +126,7 @@ namespace Charity.Models
             }
         }
 
+        // Parsing shoes season
         private static Season? ParseSeason(string season)
         {
             switch (season.ToLower())
@@ -139,6 +148,7 @@ namespace Charity.Models
             }
         }
 
+        // Parsing shoes type
         private static ShoeType? ParseType(string type)
         {
             switch (type.ToLower())

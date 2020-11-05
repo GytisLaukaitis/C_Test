@@ -4,6 +4,8 @@ namespace Charity.Models
 {
 	public class Shoe
 	{
+		
+		// Properties
 		public ShoeType Type { get; private set; }
 
 		public Season Season { get; private set; }
@@ -14,6 +16,8 @@ namespace Charity.Models
 
 		public Condition Condition { get; private set; }
 
+		
+		// Shoe constructor
 		public Shoe(ShoeType type, Season season, int size, string color, Condition condition)
 		{
 			Type = type;
@@ -23,6 +27,8 @@ namespace Charity.Models
 			Condition = condition;
 		}
 
+		
+		// ToString method override
 		public override string ToString()
 		{
 			return "Shoe type: " + Type + "\n" + "Season type: " + Season + "\n"
