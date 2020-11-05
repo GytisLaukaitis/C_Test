@@ -1,6 +1,7 @@
 ﻿Charity 2
 
-Kids,winter,25,black,satisfiable
-Kids,autumn,31,brown,very good
-woman, spring, 37, pink, good
-woman, summer, 36, white, very good
+Child,Winter,25,black,Decent
+Child,Autumn,31,brown,Very Good
+Women, Spring, 37, pink, Good
+Women, Summer, 36, white, Very Good
+Men, Autumn, 42, blue, Decent

@@ -29,14 +29,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e76e1153-1126-4fdf-9231-5f84592fa239" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.vs/Solution1/v16/.suo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Charity/Charity3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Charity/Enums/Condition.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Charity/Enums/Season.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Charity/Enums/ShoeType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Charity/Models/Charity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Charity/Models/Shoe.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Charity/obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Charity/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Charity/obj/Release/.NETFramework,Version=v4.8.AssemblyAttributes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Solution1/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Solution1/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Charity/Charity.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Charity/Charity.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Charity/Charity.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Charity/Charity.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Charity/Charity2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Charity/Charity2.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Charity/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Charity/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Charity/Shoe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Charity/Shoe.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Charity/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Charity/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Charity/Shoe.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Charity/bin/Debug/Charity.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Charity/bin/Debug/Charity.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Charity/bin/Debug/Charity.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Charity/bin/Debug/Charity.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Charity/obj/Debug/Charity.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Charity/obj/Debug/Charity.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Charity/obj/Debug/Charity.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Charity/obj/Debug/Charity.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Charity/obj/Debug/Charity.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Charity/obj/Debug/Charity.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Charity/obj/Debug/Charity.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Charity/obj/Debug/Charity.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Charity/obj/Debug/Charity.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Charity/obj/Debug/Charity.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Solution1.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Solution1.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,23 +80,33 @@
         <option value="$PROJECT_DIR$/Testing/Program.cs" />
         <option value="$PROJECT_DIR$/Testing/Charity.cs" />
         <option value="$PROJECT_DIR$/ConsoleApplication1/Program.cs" />
+        <option value="$PROJECT_DIR$/Charity/Shoe.cs" />
+        <option value="$PROJECT_DIR$/Charity/Models/Shoe.cs" />
+        <option value="$PROJECT_DIR$/Charity/Enums/Season.cs" />
+        <option value="$PROJECT_DIR$/Charity/Enums/ShoeType.cs" />
+        <option value="$PROJECT_DIR$/Charity/Enums/Condition.cs" />
         <option value="$PROJECT_DIR$/Charity/Charity2.csv" />
         <option value="$PROJECT_DIR$/Charity/Charity.csv" />
-        <option value="$PROJECT_DIR$/Charity/Shoe.cs" />
         <option value="$PROJECT_DIR$/Charity/Program.cs" />
+        <option value="$PROJECT_DIR$/Charity/Models/Charity.cs" />
+        <option value="$PROJECT_DIR$/Charity/Charity3.csv" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1jgT3mGVKEiFfMHA3FvJNZz2qQI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="RiderIisExpressOptionsPageId" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Project.Charity">
@@ -167,8 +202,10 @@
       <workItem from="1604402150921" duration="38000" />
       <workItem from="1604402208033" duration="935000" />
       <workItem from="1604403397111" duration="15901000" />
-      <workItem from="1604421028983" duration="8806000" />
-      <workItem from="1604481542054" duration="10661000" />
+      <workItem from="1604421028983" duration="8466000" />
+      <workItem from="1604561954506" duration="37000" />
+      <workItem from="1604562043394" duration="9326000" />
+      <workItem from="1604574305450" duration="3797000" />
     </task>
     <servers />
   </component>
@@ -190,6 +227,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -197,22 +235,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" width="1089" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1604225624548" />
-    <state width="1493" height="401" key="GridCell.Tab.0.bottom" timestamp="1604492264951">
+    <state width="1493" height="401" key="GridCell.Tab.0.bottom" timestamp="1604578121051">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="401" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604492264951" />
-    <state width="1493" height="401" key="GridCell.Tab.0.center" timestamp="1604492264951">
+    <state width="1493" height="401" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604578121051" />
+    <state width="1493" height="401" key="GridCell.Tab.0.center" timestamp="1604578121051">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="401" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604492264951" />
-    <state width="1493" height="401" key="GridCell.Tab.0.left" timestamp="1604492264951">
+    <state width="1493" height="401" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604578121051" />
+    <state width="1493" height="401" key="GridCell.Tab.0.left" timestamp="1604578121051">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="401" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604492264951" />
-    <state width="1493" height="401" key="GridCell.Tab.0.right" timestamp="1604492264951">
+    <state width="1493" height="401" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604578121051" />
+    <state width="1493" height="401" key="GridCell.Tab.0.right" timestamp="1604578121051">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="401" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604492264951" />
+    <state width="1493" height="401" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604578121051" />
     <state x="361" y="144" key="Rider.ProjectTemplateDialog.Size" timestamp="1604402124181">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -221,10 +259,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="571" y="86" key="RiderGenerateDialog/0.0.1536.824@0.0.1536.824" timestamp="1604403736074" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1604225032590">
+    <state x="277" y="57" key="SettingsEditor" timestamp="1604561988675">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604225032590" />
+    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604561988675" />
     <state x="93" y="93" width="1350" height="638" key="VCS.FileHistoryDialog" timestamp="1604411530818">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
