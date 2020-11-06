@@ -68,11 +68,14 @@ namespace Charity
                     // Option 2
                     case "2":
 
+                        if(winterShoes != null) {
+                            winterShoes.Clear();
                         winterShoes.AddRange(firstCharity.Shoes.Where(x =>
                             x.Season == Season.Winter && x.Type == ShoeType.Child));
 
                         winterShoes.AddRange(secondCharity.Shoes.Where(x =>
                             x.Season == Season.Winter && x.Type == ShoeType.Child));
+                            }
 
                         Console.WriteLine("Done! Check option 6 for full list");
                         Console.WriteLine("------------------------------------------------");
