@@ -21,7 +21,7 @@ namespace Charity
 
 
             // Displaying all shoes in both charities
-            
+
             firstCharity.ParseFile(FirstFilePath);
             secondCharity.ParseFile(SecondFilePath);
 
@@ -68,14 +68,15 @@ namespace Charity
                     // Option 2
                     case "2":
 
-                        if(winterShoes != null) {
+                        if (winterShoes != null)
+                        {
                             winterShoes.Clear();
-                        winterShoes.AddRange(firstCharity.Shoes.Where(x =>
-                            x.Season == Season.Winter && x.Type == ShoeType.Child));
+                            winterShoes.AddRange(firstCharity.Shoes.Where(x =>
+                                x.Season == Season.Winter && x.Type == ShoeType.Child));
 
-                        winterShoes.AddRange(secondCharity.Shoes.Where(x =>
-                            x.Season == Season.Winter && x.Type == ShoeType.Child));
-                            }
+                            winterShoes.AddRange(secondCharity.Shoes.Where(x =>
+                                x.Season == Season.Winter && x.Type == ShoeType.Child));
+                        }
 
                         Console.WriteLine("Done! Check option 6 for full list");
                         Console.WriteLine("------------------------------------------------");
@@ -121,6 +122,12 @@ namespace Charity
 
                     // Option 6
                     case "6":
+                        if (winterShoes.Count == 0)
+                        {
+                            Console.WriteLine("There are no list yet, please choose option 2");
+                            Console.WriteLine("------------------------------------------------");
+                        }
+
                         foreach (var shoe in winterShoes)
                         {
                             Console.WriteLine(shoe.ToString());
@@ -128,7 +135,7 @@ namespace Charity
 
                         Menu();
                         break;
-                    
+
                     // Any other option evalutes to exit
                     default:
                         Exit();
