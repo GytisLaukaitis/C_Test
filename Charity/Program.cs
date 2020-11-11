@@ -22,6 +22,9 @@ namespace Charity
 
             // Displaying all shoes in both charities
 
+            Console.WriteLine();
+            Console.WriteLine("Full initial list of both charities");
+            
             firstCharity.ParseFile(FirstFilePath);
             secondCharity.ParseFile(SecondFilePath);
 
