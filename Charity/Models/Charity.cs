@@ -12,10 +12,12 @@ namespace Charity.Models
         private string _title { get; set; }
         private List<Shoe> _shoes { get; set; }
 
+        // Constructot
         public Organization()
         {
         }
 
+        // Properties
         public List<Shoe> Shoes
         {
             get => _shoes ?? (_shoes = new List<Shoe>());
